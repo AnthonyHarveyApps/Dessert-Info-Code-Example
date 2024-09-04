@@ -12,7 +12,7 @@ import SwiftData
 struct Dessert_Info_Code_ExampleApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            FavoritedItem.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,7 @@ struct Dessert_Info_Code_ExampleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MealListView()
         }
         .modelContainer(sharedModelContainer)
     }
